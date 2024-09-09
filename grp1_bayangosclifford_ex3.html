@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <script>
+            function toggleOtherInput() {
+                var othersRadio = document.getElementById("Others");
+                var otherInputField = document.getElementById("otherInput");
+
+                if (othersRadio.checked) {
+                    otherInputField.style.display = "block";
+                } else {
+                    otherInputField.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="grp1_bayangosclifford_ex3.php" method="post">
+            <h1>Hello, welcome to this simple webpage.</h1>
+            <p>Choose from the option below the content you want to display.</p>
+
+            <input type="radio" id="AllTooWell" name="lyrics[]" value="alltoowell" onclick="toggleOtherInput()">
+            <label for="AllTooWell">All Too Well Lyrics</label><br>
+
+            <input type="radio" id="HotToGo" name="lyrics[]" value="hottogo" onclick="toggleOtherInput()">
+            <label for="HotToGo">Hot To Go Lyrics</label><br>
+
+            <input type="radio" id="Others" name="lyrics[]" value="others" onclick="toggleOtherInput()">
+            <label for="Others">Others</label><br>
+
+            <input type="text" id="otherInput" name="other_lyrics" placeholder="Enter your own lyrics" style="display:none;"><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </body>
+</html>
